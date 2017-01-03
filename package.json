@@ -2,7 +2,7 @@
     "name": "open-under",
     "displayName": "open-under",
     "description": "Opens a file or multiple files under the cursor or in a selection",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "publisher": "kevin-felichko",
     "icon": "images/open-under.svg",
     "repository": {
@@ -12,6 +12,13 @@
     "engines": {
         "vscode": "^1.5.0"
     },
+    "keywords": [
+        "open file under cursor",
+        "open multiple files",
+        "gf",
+        "C-x C-f",
+        "visit file"
+    ],
     "categories": [
         "Other"
     ],
