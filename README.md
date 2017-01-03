@@ -5,26 +5,20 @@
 
 ####Open a single file w/ Shift-Alt-O keystroke  
 
-![alt text][singlefilekeystroke]
+![Single File Keystroke](images/single-file-cursor.gif)
 
 ####Open a single file w/ Command Palette  
 
-![alt text][singlefilepalette]
+![Single File Palette](images/single-file-palette.gif)
 
 ####Open a single file w/ Selection & Keystroke
 
-![alt text][singlefileselection]
+![Single File Selection](images/single-file-selection.gif)
 
 ####Open multiple files w/ Selection & Keystroke
 
-![alt text][multifileselection]
+![Multiple File Selection](images/multi-file-selection.gif)
 
 Use at your own risk.  This was a quick project to solve a recurring issue.  Feel free to modify as you wish.  I only intended to get it started.
 
 **Enjoy!**
-
-
-[singlefilekeystroke]: ./images/single-file-cursor.gif "Single File Keystroke"
-[singlefilepalette]: ./images/single-file-palette.gif "Single File Palette"
-[singlefileselection]: ./images/single-file-selection.gif "Single File Selection"
-[multifileselection]: ./images/multi-file-selection.gif "Multiple File Selection"

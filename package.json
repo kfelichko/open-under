@@ -1,9 +1,13 @@
 {
     "name": "open-under",
     "displayName": "open-under",
-    "description": "Opens a file or multiple file under the cursor or in a selection",
+    "description": "Opens a file or multiple files under the cursor or in a selection",
     "version": "0.1.0",
-    "publisher": "Kevin Felichko",
+    "publisher": "kevin-felichko",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kfelichko/open-under"
+    },
     "engines": {
         "vscode": "^1.5.0"
     },
