@@ -1,0 +1,39 @@
+{
+    "name": "open-under",
+    "displayName": "open-under",
+    "description": "Opens a file or multiple file under the cursor or in a selection",
+    "version": "0.1.0",
+    "publisher": "Kevin Felichko",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.openUnder"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.openUnder",
+            "title": "Open Under"
+        }],
+        "keybindings": [{
+            "key": "alt+shift+o",
+            "mac": "alt+shift+o",
+            "command": "extension.openUnder"
+        }]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "eslint": "^3.6.0",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
