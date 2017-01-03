@@ -2,7 +2,7 @@
     "name": "open-under",
     "displayName": "open-under",
     "description": "Opens a file or multiple files under the cursor or in a selection",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "publisher": "kevin-felichko",
     "icon": "images/open-under.svg",
     "repository": {
