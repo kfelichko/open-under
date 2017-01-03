@@ -2,8 +2,9 @@
     "name": "open-under",
     "displayName": "open-under",
     "description": "Opens a file or multiple files under the cursor or in a selection",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "kevin-felichko",
+    "icon": "images/open-under.svg",
     "repository": {
         "type": "git",
         "url": "https://github.com/kfelichko/open-under"
@@ -19,15 +20,19 @@
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.openUnder",
-            "title": "Open Under"
-        }],
-        "keybindings": [{
-            "key": "alt+shift+o",
-            "mac": "alt+shift+o",
-            "command": "extension.openUnder"
-        }]
+        "commands": [
+            {
+                "command": "extension.openUnder",
+                "title": "Open Under"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "alt+shift+o",
+                "mac": "alt+shift+o",
+                "command": "extension.openUnder"
+            }
+        ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install"
