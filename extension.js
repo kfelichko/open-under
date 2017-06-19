@@ -4,9 +4,13 @@ var vscode = require('vscode');
 var path = require('path');
 var fs = require('fs');
 
-var getFullPath = (root, filePath) => {
+var getFullPath = (workspaceRoot, fileRoot, filePath) => {
     if (filePath.indexOf('/') === 0) {
-      return filePath;
+      return path.join(workspaceRoot, filePath.substr(1));
+    }
+	
+    if (filePath.indexOf('../') === 0) {
+      return path.join(fileRoot, filePath);
     }
 
     if (filePath.indexOf('~') === 0) {
@@ -14,7 +18,7 @@ var getFullPath = (root, filePath) => {
       return path.join(home, filePath.substr(1));
     }
 
-    return path.resolve(root, filePath);
+    return path.resolve(fileRoot, filePath);
   }
 
 
@@ -38,9 +42,21 @@ function activate(context) {
         }
 
         var files = editor.document.getText(selection).trim().match(bounds);
+		
         for (var i = 0; i < files.length; i++) {
             var text = files[i];
-            var filename = getFullPath(vscode.workspace.rootPath, text);
+			
+			if (text.indexOf('"') >= 0) {
+				var re = /\"([^\"]+)\"/g;
+				var results = text.match(re);
+				if (typeof(results[0]) !== 'undefined') {
+					text = results[0];
+					text = text.replace(/["]+/g, '');
+				}
+			}
+			
+            var filename = getFullPath(vscode.workspace.rootPath, path.dirname(editor.document.uri.fsPath), text);
+			
             if (!fs.existsSync(filename)) {
                 vscode.window.showInformationMessage(`Could not find ${filename}!`);
                 continue;
